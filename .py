@@ -1,19 +1,13 @@
-# program to find if a number is an armstrong number
+# to find factors of user input
 
-# take input from the user
-number = int(input("input your number:"))
-# calculate number of digits
-digits = len(str(number))
-# initalize result variable
-resultnumber = 0
-# find sum of the a^digits of each digit 
-temp = number 
-while temp > 0:
-    digit = temp % 10
-    resultnumber += digit ** digits
-    temp //= 10
-# display the result
-if number == resultnumber:
-   print(number,"is an armstrong number")
-else:
-   print(number,"is not an armstrong number")
+# goes from 1 to number and check if I divide If yes it is a factor
+def print_factors(number):
+    print("the factors of",number,"are:")
+    for i in range(1, number + 1):
+        if number % i == 0:
+            print(i)
+# takeing input from the user
+number = int(input("enter your number to find its factors: "))
+
+# calling our function
+print_factors(number)

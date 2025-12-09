@@ -1,13 +1,19 @@
-# to find factors of user input
+# take input from the user 
+number = int(input("Enter your number: "))
 
-# goes from 1 to number and check if I divide If yes it is a factor
-def print_factors(number):
-    print("the factors of",number,"are:")
-    for i in range(1, number + 1):
-        if number % i == 0:
-            print(i)
-# takeing input from the user
-number = int(input("enter your number to find its factors: "))
+# store the origanal number for comparison later
+original_number = number
+reversed_number = 0
 
-# calling our function
-print_factors(number)
+# reverse the order
+while number> 0:
+    digit = number % 10
+    reversed_number = reversed_number * 10 + digit
+
+
+# check if the origanal number and the reversed number are the same 
+if original_number == reversed_number :
+    print(f"{original_number} is a palindrone") 
+else:
+    print(f"{original_number} is not a palindrone") 
+       

@@ -1,19 +1,13 @@
-# take input from the user 
-number = int(input("Enter your number: "))
+# program to find HCF/GCD
 
-# store the origanal number for comparison later
-original_number = number
-reversed_number = 0
+# enter 2 numbers
+numberLargest = int(input("enter Largest number  :"))  
+numberSmallest = int(input("enter Smallest number  :"))
 
-# reverse the order
-while number> 0:
-    digit = number % 10
-    reversed_number = reversed_number * 10 + digit
+# useing Eucliden Algorithms
+while(numberSmallest):
+    numberStore = numberSmallest
+    numberSmallest = numberLargest % numberSmallest
+    numberLargest = numberStore
 
-
-# check if the origanal number and the reversed number are the same 
-if original_number == reversed_number :
-    print(f"{original_number} is a palindrone") 
-else:
-    print(f"{original_number} is not a palindrone") 
-       
+print("HCF is : ",numberLargest )
